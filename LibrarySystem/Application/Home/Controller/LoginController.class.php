@@ -22,6 +22,7 @@ class LoginController extends RestController {
                     $_SESSION['id'] = $id;
                     $_SESSION['name']=$select['user_name'];
                     $_SESSION['type'] = 'user';
+                    //$this->response($_SESSION['id']);
                     $this->redirect('Index/homeUser', '', 2,
                         '登錄成功！前往首頁!...页面跳转中...');
                 } else {

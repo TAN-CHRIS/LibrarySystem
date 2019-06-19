@@ -17,24 +17,24 @@ class EmployeeController extends RestController {
     public function getPersonalInfoByID(){
         $e_sql=new EmployeeModel();
         $id=$_SESSION['id'];
-        $emp=$e_sql->field('emp_password',true)->where("emp_id=$id")->select();
+        $emp=$e_sql->field('emp_password',true)->where("emp_id='$id'")->select();
 
         $l_sql=new LibraryModel();
         $lib_id=$emp['lib_id'];
-        $lib=$l_sql->field('lib_name')->where("lib_id=$lib_id")->select();
+        $lib=$l_sql->field('lib_name')->where("lib_id='$lib_id'")->select();
 
         $data=$emp[0];
         $data['lib_name']=$lib[0]['lib_name'];
-        $this->response($data,'json');
+        $this->ajaxReturn($data,'json');
     }
 
     public function DeployBook(){
         $id=$_POST['book_id'];
         $lib_name=$_POST['lib_name'];
         $l_sql=new LibraryModel();
-        $lib=$l_sql->field('lib_id')->where("lib_name=$lib_name")->select();
+        $lib=$l_sql->field('lib_id')->where("lib_name='$lib_name'")->select();
         $b_sql=new BookModel();
-        $book=$b_sql->field()->where("book_id=$id")->select();
+        $book=$b_sql->field('*')->where("book_id='$id'")->select();
 
         if($book[0]['lib_id']==$lib[0]['lib_id']){
             $this->redirect('Index/deploy', '', 2,
@@ -89,7 +89,7 @@ class EmployeeController extends RestController {
         }
         else{
             $b_sql=new BookModel();
-            $b_sql->where("book_id=$id")->delete();
+            $b_sql->where("book_id='$id'")->delete();
             $this->redirect('Index/deleteBook','',2,
                 '書籍刪除成功!...页面跳转中...');
         }

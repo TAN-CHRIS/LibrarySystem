@@ -13,10 +13,12 @@ namespace Home\Controller;
     use Home\Model\LibraryModel;
 
     class BookController extends RestController {
-        public function getBookInfobyName(){
-            $name=$_GET['book_name'];
+        public function getBookInfobyName($name){
+            //$name=$_POST['book_name'];
+            //return 'hello'.$name;
             $b_sql = new BookModel();
             $books = $b_sql->field('*')->where("book_name='$name'")->select();
+            //$this->response($books,'json');
             $datas=array();
     
             if(!$books[0]){
@@ -34,6 +36,7 @@ namespace Home\Controller;
                     array_push($datas,$data);
                 }
             }
-            $this->response($datas,'json');
+            //$this->response($datas,'json');
+            $this->ajaxReturn($datas,'json');
         }
     }
