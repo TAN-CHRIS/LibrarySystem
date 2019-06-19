@@ -18,7 +18,7 @@ class UserController extends RestController {
     public function getPersonalInfoByID(){
         $sql=new UserModel();
         $id=$_SESSION['id'];
-        $res=$sql->field('user_password',true)->where("user_id=$id")->select();
+        $res=$sql->field('user_password',true)->where("user_id='$id'")->select();
         $this->ajaxReturn($res[0],'json');
     }
 

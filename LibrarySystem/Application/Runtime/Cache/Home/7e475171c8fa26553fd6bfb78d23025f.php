@@ -54,34 +54,15 @@
                 <div class="row clearfix">
                         <div class="col-md-12 column">
                                 <table id="booklist" class="table">
-                                        <th>
-                                            book_id
-                                        </th>
-                                        <th>
-                                            書名
-                                        </th>
-                                        <th>
-                                            作者
-                                        </th>
-                                        <th>
-                                            出版社
-                                        </th>
-                                        <th>
-                                            價格
-                                        </th>
-                                        <th>
-                                            索引號
-                                        </th>
-                                        <th>
-                                            狀態
-                                        </th>
-                                        <th>
-                                            所在圖書館
-                                        </th>
-                                        <th>
-                                            圖書館地址
-                                        </th>
-                                
+                                        <th>book_id</th>
+                                        <th>書名</th>
+                                        <th>作者</th>
+                                        <th>出版社</th>
+                                        <th>價格</th>
+                                        <th>索引號</th>
+                                        <th>狀態</th>
+                                        <th>所在圖書館</th>
+                                        <th>圖書館地址</th>
                                     <tbody id="book_body">
                                     </tbody>
                                 </table>

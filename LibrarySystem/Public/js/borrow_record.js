@@ -16,7 +16,7 @@ $(document).ready(function(){
            
             success: function(data){        //如果前端收到后端传来的正确的数据则会进入此函数, 此处的参数data就是后端传来的数据
                 // 这里写要进行的处理
-                ///alert(JSON.stringify(data));
+                alert(JSON.stringify(data));
                 showbook(data);
                 // var bookdata = JSON.stringify(data)  //识别后端传过来的Json字符串(具体是什么格式要看后端,这里以json格式举例), 使用data['keyname']这样的形式来获取对应键的值
                 //alert('success!');

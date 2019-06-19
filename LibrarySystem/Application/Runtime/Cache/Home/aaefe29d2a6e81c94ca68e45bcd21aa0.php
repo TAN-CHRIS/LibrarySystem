@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -25,23 +25,17 @@
                             <div id="myAlert" class="alert alert-success">
                                     <table class="table" id="info">
                                         <th>姓名</th>
-                                        <th>單位</th>
                                         <th>性別</th>
                                         <th>電話</th>
                                         <th>郵箱</th>
-                                        <th>最大借書數</th>
-                                        <th>最長借書天數</th>
-                                        <th>用戶類別</th>
+                                        <th>所在單位</th>
                                         <tbody id="info">
                                             <tr>
-                                                <td id="user_name"></td>
-                                                <td id="department"></td>
+                                                <td id="emp_name"></td>
                                                 <td id="gender"></td>
                                                 <td id="phone"></td>
                                                 <td id="email"></td>
-                                                <td id="maxnum"></td>
-                                                <td id="maxday"></td>
-                                                <td id="type"></td>
+                                                <td id="libname"></td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -62,7 +56,7 @@
         <script src="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/js/bootstrap.min.js"></script>
         <script src="https://unpkg.com/bootstrap-table@1.14.2/dist/bootstrap-table.min.js"></script>
         <!-- 引入自己的js,使用相对路径 -->
-        <script src="__PUBLIC__/JS/user.js"></script>
+        <script src="/LibrarySystem/Public/JS/employee.js"></script>
     
     </footer>
 </html>

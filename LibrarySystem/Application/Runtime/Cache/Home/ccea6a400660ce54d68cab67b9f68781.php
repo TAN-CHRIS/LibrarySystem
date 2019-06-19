@@ -10,7 +10,6 @@
   <link href="/LibrarySystem/Public/css/popuo-box.css" rel="stylesheet" type="text/css" media="all" />
 
   <!-- Style --> <link rel="stylesheet" href="/LibrarySystem/Public/css/style.css" type="text/css" media="all">
-  
 </head>
 <body>
         <h1>歡迎使用圖書館管理系統</h1>

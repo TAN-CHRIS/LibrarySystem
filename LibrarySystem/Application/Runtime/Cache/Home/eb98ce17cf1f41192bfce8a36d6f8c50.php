@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -15,17 +15,19 @@
                     <div class="col-md-12 column">
                         <div class="page-header">
                             <h1>
-                                預約書籍
+                                刪除書籍
                             </h1>
                         </div>
                     </div>
                     <div class="btn-group pull-right">
-                            <a href="homeUser.html"  class="btn btn-default">
+                            <a href="homeEmp.html"  class="btn btn-default">
                                 <em class="glyphicon glyphicon-home"></em> 主頁 </a> 
-                            <a href="user.html" class="btn btn-default" >
+                            <a href="employee.html" class="btn btn-default" >
                                 <em class="glyphicon glyphicon-user"></em> 個人信息</a> 
-                            <a href="borrow.html" class="btn btn-default">
-                                <em class="glyphicon glyphicon-signal"></em> 借書紀錄</a> 
+                            <a href="deleteBook.html" class="btn btn-default" >
+                                <em class="glyphicon glyphicon-trash"></em> 刪除書籍</a> 
+                            <a href="addBook.html" class="btn btn-default">
+                                <em class="glyphicon glyphicon-plus"></em> 添加书籍</a> 
                             <a href="login.html" class="btn btn-default">
                                     <em class="glyphicon glyphicon-log-out"></em> 登出 </a>
                     </div>
@@ -35,12 +37,14 @@
                     <div class="col-md-2 column">
                     </div>
                     <div class="col-md-6 column">
-                        <form role="form" method="POST" action="http://localhost/LibrarySystem/index.php/Home/User/OrderBook">
+                        <form role="form" method="POST" action="http://localhost/LibrarySystem/index.php/Home/Employee/DeployBook">
                             <div class="form-group">
-                                 <label for="bookid">預約書籍ID</label>
+                                 <label for="bookid">調派書籍ID</label>
                                  <input type="text" class="form-control" name="book_id" />
+                                 <label for="bookid">調派書籍名稱</label>
+                                 <input type="text" class="form-control" name="book_name" />
                             </div>
-                            <input type="submit" class="btn btn-default" value="預約"></button>
+                            <input type="submit" class="btn btn-default" value="更改"></button>
                         </form>
                     </div>
                     <div class="col-md-4 column">
